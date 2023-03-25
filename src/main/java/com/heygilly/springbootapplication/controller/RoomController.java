@@ -9,16 +9,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.heygilly.springbootapplication.service.RoomService.rooms;
+
 @Controller
 @RequestMapping("/rooms")
 public class RoomController {
-    private static final List<Room> rooms = new ArrayList<>();
-
-    static {
-        for(long i = 0; i < 10; i++) {
-            rooms.add(new Room(i, "Room "+i, "R"+i, "Q"));
-        }
-    }
+//    private static final List<Room> rooms = new ArrayList<>();
+//
+//    static {
+//        for(long i = 0; i < 10; i++) {
+//            rooms.add(new Room(i, "Room "+i, "R"+i, "Q"));
+//        }
+//    }
 
 
     @GetMapping
